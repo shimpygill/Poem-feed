@@ -58,10 +58,28 @@
                     <li><a href="pages/404.html">मनोरंजन</a></li>
                     <li><a href="#">विज्ञान-टेक्नॉलॉजी</a></li>
                     <li><a href="#">सोशल</a></li>
+                    <li> <a href="#" class="search-icon" aria-hidden="true"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div>
         </nav>
     </section>
+    <div class="search-bar">
+        <div class="container searchbar_container">
+            <form method="post" action="" class="search-form">
+                <div class='hiddenFields'>
+                    <input type="hidden" name="ACT" value="6" />
+                    <input type="hidden" name="RES" value="" />
+                    <input type="hidden" name="meta" value="" />
+                    <input type="hidden" name="site_id" value="1" />
+                    <input type="hidden" name="csrf_token" value="4a281ba979a935334df7f48605df23cde883053a" />
+                </div>
+
+
+                <input type="search" id="searchbar" name="keywords" placeholder="Search" />
+                <input type="submit" id="search-submit" value="Search" />
+            </form>
+        </div>
+    </div>
     <section class="addbannersec">
 
         <div class="add_banner"><a href="#"><img src="images/addbanner.jpg" alt=""></a></div>
@@ -394,6 +412,7 @@
             <p class="developer">Developed By PoemFeed</p>
         </div>
     </footer>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -402,5 +421,13 @@
     <script src="assets/js/jquery.newsTicker.min.js"></script>
     <script src="assets/js/jquery.fancybox.pack.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.search-icon').on('click', function () {
+                $('.search-bar').slideToggle("slow");
+                $("input[type='search']").focus();
+            });
+        });
+    </script>
 </body>
 </html>
